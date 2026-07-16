@@ -13,11 +13,11 @@ export default function PrivacySection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <span className="text-[10px] font-mono text-rose-dusty uppercase tracking-widest font-semibold block">Regulatory Compliance</span>
+        <span className="text-[10px] font-dmSans text-rose-dusty uppercase tracking-widest font-semibold block">Regulatory Compliance</span>
         <h1 className="text-4xl md:text-5xl font-serif text-charcoal-text font-normal leading-tight">
           Privacy Policy
         </h1>
-        <p className="text-sm font-mono text-sage-accent uppercase tracking-widest font-medium">
+        <p className="text-sm font-dmSans text-sage-accent uppercase tracking-widest font-medium">
           Effective July 2026 &mdash; Built on absolute user integrity.
         </p>
       </motion.section>

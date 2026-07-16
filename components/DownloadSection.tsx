@@ -45,11 +45,11 @@ export default function DownloadSection() {
     <div className="space-y-16 lg:space-y-24">
       {/* 1. EDITORIAL HEADER */}
       <section className="space-y-4 max-w-2xl">
-        <span className="text-[10px] font-mono text-rose-dusty uppercase tracking-widest font-semibold block">Companion Apps</span>
+        <span className="text-[10px] font-dmSans text-rose-dusty uppercase tracking-widest font-semibold block">Companion Apps</span>
         <h1 className="text-4xl md:text-5xl font-serif text-charcoal-text font-normal leading-tight">
           Sleek software, <br />always at your fingertips.
         </h1>
-        <p className="text-sm font-mono text-sage-accent uppercase tracking-widest font-medium">
+        <p className="text-sm font-dmSans text-sage-accent uppercase tracking-widest font-medium">
           Secure the Sheree suite for iOS and Android.
         </p>
       </section>
@@ -66,7 +66,7 @@ export default function DownloadSection() {
                 <div className="w-10 h-10 rounded-xl bg-rose-dusty/10 text-rose-dusty flex items-center justify-center">
                   <Smartphone className="w-5 h-5" />
                 </div>
-                <div className="text-[10px] font-mono text-charcoal-text/50 uppercase tracking-widest">
+                <div className="text-[10px] font-dmSans text-charcoal-text/50 uppercase tracking-widest">
                   {item.releaseDate}
                 </div>
               </div>
@@ -82,14 +82,14 @@ export default function DownloadSection() {
             </div>
 
             <div className="space-y-4 pt-4 border-t border-charcoal-text/5">
-              <div className="flex justify-between text-[11px] font-mono text-charcoal-text/60">
+              <div className="flex justify-between text-[11px] font-dmSans text-charcoal-text/60">
                 <span>FILE SIZE: {item.fileSize}</span>
                 <span className="text-sage-accent uppercase">Verified safe</span>
               </div>
 
               <button
                 onClick={() => startSimulatedDownload(item)}
-                className="w-full bg-rose-dusty hover:bg-rose-dusty/90 text-white font-mono text-xs uppercase tracking-widest py-3.5 rounded-full flex items-center justify-center gap-2 transition-colors duration-250 cursor-pointer shadow-sm hover:shadow-md"
+                className="w-full bg-rose-dusty hover:bg-rose-dusty/90 text-white font-dmSans text-xs uppercase tracking-widest py-3.5 rounded-full flex items-center justify-center gap-2 transition-colors duration-250 cursor-pointer shadow-sm hover:shadow-md"
               >
                 <Download className="w-4 h-4" />
                 Simulate Download
@@ -103,7 +103,7 @@ export default function DownloadSection() {
       <section className="bg-blush-soft/20 border border-charcoal-text/5 p-8 md:p-12 rounded-[32px] space-y-8">
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="space-y-2 text-center">
-            <span className="text-[10px] font-mono text-sage-accent uppercase tracking-widest font-semibold block">Under the Hood</span>
+            <span className="text-[10px] font-dmSans text-sage-accent uppercase tracking-widest font-semibold block">Under the Hood</span>
             <h3 className="text-2xl md:text-3xl font-serif text-charcoal-text">Instant features, zero bloat.</h3>
           </div>
 
@@ -147,7 +147,7 @@ export default function DownloadSection() {
               <div className="space-y-2">
                 <Smartphone className="w-10 h-10 text-rose-dusty mx-auto" />
                 <h3 className="font-serif text-lg text-charcoal-text">{downloadingItem.title}</h3>
-                <p className="text-xs text-charcoal-text/55 font-mono">{downloadingItem.fileSize}</p>
+                <p className="text-xs text-charcoal-text/55 font-dmSans">{downloadingItem.fileSize}</p>
               </div>
 
               {downloadCompleted ? (
@@ -158,12 +158,12 @@ export default function DownloadSection() {
                   <div className="space-y-1">
                     <h4 className="font-serif text-base text-charcoal-text">Simulated Download Ready!</h4>
                     <p className="text-xs text-charcoal-text/70 leading-relaxed max-w-xs mx-auto">
-                      In the actual production build, this would start downloading the compiled native app bundle (<span className="font-mono">.ipa</span> / <span className="font-mono">.apk</span>) or route to the App Store.
+                      In the actual production build, this would start downloading the compiled native app bundle (<span className="font-dmSans">.ipa</span> / <span className="font-dmSans">.apk</span>) or route to the App Store.
                     </p>
                   </div>
                   <button
                     onClick={closeProgressModal}
-                    className="w-full bg-charcoal-text hover:bg-rose-dusty text-white font-mono text-xs uppercase tracking-widest py-3 rounded-full transition-colors duration-250 cursor-pointer"
+                    className="w-full bg-charcoal-text hover:bg-rose-dusty text-white font-dmSans text-xs uppercase tracking-widest py-3 rounded-full transition-colors duration-250 cursor-pointer"
                   >
                     Return to Suite
                   </button>
@@ -177,7 +177,7 @@ export default function DownloadSection() {
                       transition={{ ease: 'easeInOut' }}
                     />
                   </div>
-                  <div className="flex justify-between items-center text-xs font-mono text-charcoal-text/70">
+                  <div className="flex justify-between items-center text-xs font-dmSans text-charcoal-text/70">
                     <span>TRANSMITTING BUNDLE...</span>
                     <span>{downloadProgress}%</span>
                   </div>

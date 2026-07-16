@@ -4,11 +4,11 @@ export default function TermsSection() {
     <div className="space-y-16 lg:space-y-24">
       {/* 1. EDITORIAL HEADER */}
       <section className="space-y-4 max-w-2xl">
-        <span className="text-[10px] font-mono text-rose-dusty uppercase tracking-widest font-semibold block">Usage Framework</span>
+        <span className="text-[10px] font-dmSans text-rose-dusty uppercase tracking-widest font-semibold block">Usage Framework</span>
         <h1 className="text-4xl md:text-5xl font-serif text-charcoal-text font-normal leading-tight">
           Terms &amp; Conditions
         </h1>
-        <p className="text-sm font-mono text-sage-accent uppercase tracking-widest font-medium">
+        <p className="text-sm font-dmSans text-sage-accent uppercase tracking-widest font-medium">
           Effective July 2026 &mdash; Fostering mutual respect.
         </p>
       </section>

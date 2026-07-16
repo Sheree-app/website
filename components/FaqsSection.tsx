@@ -33,11 +33,11 @@ export default function FaqsSection() {
     <div className="space-y-16 lg:space-y-24">
       {/* 1. EDITORIAL HEADER */}
       <section className="space-y-4 max-w-2xl">
-        <span className="text-[10px] font-mono text-rose-dusty uppercase tracking-widest font-semibold block">Knowledge Base</span>
+        <span className="text-[10px] font-dmSans text-rose-dusty uppercase tracking-widest font-semibold block">Knowledge Base</span>
         <h1 className="text-4xl md:text-5xl font-serif text-charcoal-text font-normal leading-tight">
           Help, clarified.
         </h1>
-        <p className="text-sm font-mono text-sage-accent uppercase tracking-widest font-medium">
+        <p className="text-sm font-dmSans text-sage-accent uppercase tracking-widest font-medium">
           Understand how Sheree elevates client &amp; provider trust.
         </p>
       </section>
@@ -53,7 +53,7 @@ export default function FaqsSection() {
               placeholder="Search questions (e.g. deposit, calendar)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-white border border-charcoal-text/15 pl-11 pr-4 py-3.5 text-xs font-sans rounded-xl focus:outline-hidden focus:border-rose-dusty transition-all duration-200 shadow-xs"
+              className="w-full bg-white border border-charcoal-text/15 pl-11 pr-4 py-3.5 text-xs font-sans rounded-2xl focus:outline-hidden focus:border-rose-dusty transition-all duration-200 shadow-xs"
             />
           </div>
 
@@ -66,7 +66,7 @@ export default function FaqsSection() {
                   setActiveCategory(cat.id as 'all' | 'booking' | 'payments' | 'professionals' | 'general');
                   setExpandedId(null);
                 }}
-                className={`px-4 py-2 rounded-full text-[10px] font-mono uppercase tracking-widest transition-all duration-200 cursor-pointer ${
+                className={`px-4 py-2 rounded-full text-[10px] font-dmSans uppercase tracking-widest transition-all duration-200 cursor-pointer ${
                   activeCategory === cat.id
                     ? 'bg-rose-dusty text-white shadow-xs'
                     : 'bg-white text-charcoal-text/75 border border-charcoal-text/10 hover:border-charcoal-text/40'
@@ -116,7 +116,7 @@ export default function FaqsSection() {
                     >
                       <div className="px-6 pb-6 pt-2 border-t border-charcoal-text/5 text-xs md:text-sm text-charcoal-text/75 leading-relaxed font-sans font-light space-y-4 bg-blush-soft/5">
                         <p>{faq.answer}</p>
-                        <div className="flex justify-between items-center pt-2 text-[10px] font-mono text-charcoal-text/50">
+                        <div className="flex justify-between items-center pt-2 text-[10px] font-dmSans text-charcoal-text/50">
                           <span>CATEGORY: {faq.category.toUpperCase()}</span>
                           <span className="text-sage-accent">Verified support article</span>
                         </div>

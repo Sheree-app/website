@@ -58,13 +58,13 @@ export default function HomeSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="inline-flex items-center gap-2 border border-sage-accent/40 bg-sage-accent/10 px-4 py-1.5 rounded-full text-xs text-charcoal-text font-mono font-medium">
+          {/* <div className="inline-flex items-center gap-2 border border-sage-accent/40 bg-sage-accent/10 px-4 py-1.5 rounded-full text-xs text-charcoal-text font-dmSans font-medium">
             <Sparkles className="w-3.5 h-3.5 text-rose-dusty animate-pulse" />
             Social-First Booking Marketplace
-          </div>
+          </div> */}
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-charcoal-text font-normal leading-[1.1] tracking-tight">
-            Discover, book, &amp; pay <br />
+            Discover, book and pay <br />
             <span className="text-rose-dusty italic font-normal">trusted professionals</span> instantly.
           </h1>
 
@@ -74,25 +74,45 @@ export default function HomeSection() {
 
           {/* Action buttons */}
           <div className="pt-4 flex flex-wrap gap-4">
-            <button
-              onClick={() => {
-                const element = document.getElementById('marketplace-discovery');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                router.push('/download');
               }}
-              className="bg-rose-dusty hover:bg-rose-dusty/90 text-white font-mono text-xs uppercase tracking-widest px-8 py-4 rounded-full flex items-center gap-3 transition-colors duration-250 cursor-pointer shadow-md hover:shadow-lg"
+              className="flex items-center gap-3 bg-black hover:bg-zinc-900 text-white px-6 py-3 rounded-2xl transition-all duration-200 cursor-pointer shadow-md hover:shadow-lg border border-white/10 hover:scale-[1.02]"
+              aria-label="Download on the App Store"
             >
-              Discover Providers
-              <ArrowRight className="w-4 h-4" />
-            </button>
-            <button
-              onClick={() => router.push('/download')}
-              className="border border-charcoal-text/15 hover:border-charcoal-text hover:bg-charcoal-text hover:text-white text-charcoal-text bg-white font-mono text-xs uppercase tracking-widest px-8 py-4 rounded-full flex items-center gap-3 transition-all duration-250 cursor-pointer"
+              <svg className="w-6 h-6 fill-white" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-63.3-64.4-63.3-64.4zm-66.7-175.7c15.8-19.2 26.5-45.7 23.6-72.2-22.9 1.1-50.6 15.3-66.7 34.7-14.5 16.7-27.1 43.4-23.7 69.4 25.9 2 51-14.1 66.8-31.9z"/>
+              </svg>
+              <div className="text-left select-none">
+                <p className="text-[8px] font-dmSans uppercase tracking-wider text-zinc-400 font-semibold leading-none mb-0.5">Download on the</p>
+                <p className="text-sm font-dmSans font-bold leading-tight">App Store</p>
+              </div>
+            </a>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                router.push('/download');
+              }}
+              className="flex items-center gap-3 bg-black hover:bg-zinc-900 text-white px-6 py-3 rounded-2xl transition-all duration-200 cursor-pointer shadow-md hover:shadow-lg border border-white/10 hover:scale-[1.02]"
+              aria-label="Get it on Google Play"
             >
-              Download Super App
-              <Smartphone className="w-4 h-4" />
-            </button>
+              <svg className="w-6 h-6" viewBox="0 0 466 511.98" xmlns="http://www.w3.org/2000/svg">
+                <g fillRule="nonzero">
+                  <path fill="#EA4335" d="M199.9 237.8 1.4 470.17c7.22 24.57 30.16 41.81 55.8 41.81 11.16 0 20.93-2.79 29.3-8.37l244.16-139.46L199.9 237.8z"/>
+                  <path fill="#FBBC04" d="m433.91 205.1-104.65-60-111.61 110.22 113.01 108.83 104.64-58.6c18.14-9.77 30.7-29.3 30.7-50.23-1.4-20.93-13.95-40.46-32.09-50.22z"/>
+                  <path fill="#34A853" d="M199.42 273.45 329.27 145.1 87.9 8.37C79.53 2.79 68.36 0 57.2 0 30.7 0 6.98 18.14 1.4 41.86l198.02 231.59z"/>
+                  <path fill="#4285F4" d="M1.39 41.86C0 46.04 0 51.63 0 57.2v397.64c0 5.57 0 9.76 1.4 15.34l216.27-214.86L1.39 41.86z"/>
+                </g>
+              </svg>
+              <div className="text-left select-none">
+                <p className="text-[8px] font-dmSans uppercase tracking-wider text-zinc-400 font-semibold leading-none mb-0.5">Get it on</p>
+                <p className="text-sm font-dmSans font-bold leading-tight">Google Play</p>
+              </div>
+            </a>
           </div>
         </motion.div>
 
@@ -116,7 +136,7 @@ export default function HomeSection() {
                 <Check className="w-4 h-4" />
               </div>
               <div>
-                <p className="text-[10px] font-mono uppercase tracking-wider text-rose-dusty">Instant Booking Confirmed</p>
+                <p className="text-[10px] font-dmSans uppercase tracking-wider text-rose-dusty">Instant Booking Confirmed</p>
                 <p className="text-xs font-semibold text-charcoal-text">Sienna Thorne — Spatial Shoot</p>
               </div>
             </div>
@@ -127,7 +147,7 @@ export default function HomeSection() {
       {/* 2. THE PROBLEM VS THE SOLUTION */}
       <section className="border-t border-charcoal-text/10 pt-16">
         <div className="text-center space-y-4 max-w-3xl mx-auto mb-16">
-          <span className="text-[10px] font-mono text-rose-dusty uppercase tracking-widest font-semibold block">Frustration vs Flow</span>
+          <span className="text-[10px] font-dmSans text-rose-dusty uppercase tracking-widest font-semibold block">Frustration vs Flow</span>
           <h2 className="text-3xl md:text-4xl font-serif text-charcoal-text leading-tight">
             Stop swimming in WhatsApp chats. Start booking.
           </h2>
@@ -145,7 +165,7 @@ export default function HomeSection() {
               </div>
               <div>
                 <h3 className="font-serif text-xl text-charcoal-text">For Customers</h3>
-                <p className="text-xs text-charcoal-text/60 font-mono uppercase tracking-widest">Discover &amp; Book in peace</p>
+                <p className="text-xs text-charcoal-text/60 font-dmSans uppercase tracking-widest">Discover &amp; Book in peace</p>
               </div>
             </div>
 
@@ -177,7 +197,7 @@ export default function HomeSection() {
               </div>
               <div>
                 <h3 className="font-serif text-xl text-charcoal-text">For Service Providers</h3>
-                <p className="text-xs text-charcoal-text/60 font-mono uppercase tracking-widest">Scale your independent craft</p>
+                <p className="text-xs text-charcoal-text/60 font-dmSans uppercase tracking-widest">Scale your independent craft</p>
               </div>
             </div>
 
@@ -204,96 +224,12 @@ export default function HomeSection() {
       </section>
 
       {/* 3. INTERACTIVE DISCOVERY MARKETPLACE DEMO */}
-      <section id="marketplace-discovery" className="scroll-mt-10 border-t border-charcoal-text/10 pt-16 space-y-12">
-        <div className="flex flex-col md:flex-row justify-between items-baseline gap-4">
-          <div className="space-y-2">
-            <span className="text-[10px] font-mono text-sage-accent uppercase tracking-widest font-semibold block">Live Directory</span>
-            <h2 className="text-3xl font-serif text-charcoal-text">Meet the Sheree Curators</h2>
-          </div>
-          <p className="text-sm text-charcoal-text/60 max-w-sm font-sans font-light">
-            Filter our network, explore verified ratings, and click &ldquo;Book Instantly&rdquo; to experience our fluid scheduling app interface.
-          </p>
-        </div>
-
-        {/* Category Filters */}
-        <div className="flex flex-wrap gap-2">
-          {(['all', 'beauty', 'wellness', 'creative', 'home'] as const).map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-widest transition-all duration-250 cursor-pointer ${
-                activeCategory === cat
-                  ? 'bg-rose-dusty text-white shadow-md'
-                  : 'bg-white text-charcoal-text/75 border border-charcoal-text/10 hover:border-charcoal-text/40'
-              }`}
-            >
-              {cat === 'all' ? 'All Curators' : cat}
-            </button>
-          ))}
-        </div>
-
-        {/* Interactive Provider Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {filteredPros.map((pro, idx) => (
-            <motion.div
-              key={pro.id}
-              className="group bg-white border border-charcoal-text/10 hover:border-rose-dusty rounded-2xl flex flex-col justify-between transition-all duration-300 overflow-hidden shadow-sm hover:shadow-md"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, duration: 0.6 }}
-            >
-              <div className="relative overflow-hidden aspect-[4/5] bg-ivory-warm">
-                <img
-                  src={pro.imageUrl}
-                  alt={pro.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
-                />
-
-                {/* Rating overlay badge */}
-                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-xs px-2.5 py-1 rounded-full border border-charcoal-text/10 text-[10px] font-mono text-charcoal-text flex items-center gap-1">
-                  <Star className="w-3 h-3 text-rose-dusty fill-rose-dusty" />
-                  <span>{pro.rating} ({pro.reviewCount})</span>
-                </div>
-
-                <div className="absolute bottom-3 right-3 bg-white px-2.5 py-1 rounded-full border border-charcoal-text/10 text-[9px] font-mono uppercase tracking-widest text-charcoal-text">
-                  {pro.category}
-                </div>
-              </div>
-
-              <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                <div className="space-y-1">
-                  <h3 className="font-serif text-lg text-charcoal-text group-hover:text-rose-dusty transition-colors duration-250">
-                    {pro.name}
-                  </h3>
-                  <p className="text-xs text-sage-accent uppercase font-mono tracking-widest">
-                    {pro.specialty}
-                  </p>
-                  <p className="text-xs text-charcoal-text/75 line-clamp-2 font-sans font-light pt-1 leading-relaxed">
-                    {pro.bio}
-                  </p>
-                </div>
-
-                <div className="flex justify-between items-center pt-2 border-t border-charcoal-text/5">
-                  <span className="text-xs font-mono text-charcoal-text/90 font-medium">{pro.pricingText}</span>
-                  <button
-                    onClick={() => setSelectedPro(pro)}
-                    className="bg-rose-dusty hover:bg-rose-dusty/90 text-white text-[10px] font-mono uppercase tracking-widest px-4 py-2.5 rounded-full transition-colors duration-200 cursor-pointer"
-                  >
-                    Book Instantly
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+      
 
       {/* 4. SOCIAL RESONANCE & TRUST CARDS */}
       <section className="bg-blush-soft/20 border border-charcoal-text/5 p-8 md:p-12 rounded-[32px] space-y-8">
         <div className="max-w-3xl mx-auto space-y-6">
-          <span className="text-[10px] font-mono text-rose-dusty uppercase tracking-widest font-semibold block text-center">Verified Resonance</span>
+          <span className="text-[10px] font-dmSans text-rose-dusty uppercase tracking-widest font-semibold block text-center">Verified Resonance</span>
           <h3 className="text-2xl md:text-3xl font-serif text-charcoal-text text-center font-normal">
             Loved by providers &amp; clients alike.
           </h3>
@@ -314,7 +250,7 @@ export default function HomeSection() {
                   />
                   <div>
                     <h4 className="font-sans font-semibold text-xs text-charcoal-text">{testimonial.author}</h4>
-                    <p className="text-[10px] font-mono text-charcoal-text/55">
+                    <p className="text-[10px] font-dmSans text-charcoal-text/55">
                       {testimonial.role}
                     </p>
                   </div>
@@ -350,7 +286,7 @@ export default function HomeSection() {
                   />
                   <div>
                     <h3 className="font-serif text-lg text-charcoal-text">Book {selectedPro.name}</h3>
-                    <p className="text-[9px] font-mono text-sage-accent uppercase tracking-widest">{selectedPro.specialty}</p>
+                    <p className="text-[9px] font-dmSans text-sage-accent uppercase tracking-widest">{selectedPro.specialty}</p>
                   </div>
                 </div>
                 {!bookingConfirmed && (
@@ -375,10 +311,10 @@ export default function HomeSection() {
                   <div className="space-y-1">
                     <h4 className="font-serif text-xl text-charcoal-text">Booking Lock Registered!</h4>
                     <p className="text-xs text-charcoal-text/75">
-                      Your appointment slot <span className="font-mono font-medium text-rose-dusty">{selectedSlot}</span> has been locked with secure digital escrow.
+                      Your appointment slot <span className="font-dmSans font-medium text-rose-dusty">{selectedSlot}</span> has been locked with secure digital escrow.
                     </p>
                   </div>
-                  <div className="bg-ivory-warm p-4 rounded-xl border border-charcoal-text/5 text-left text-[11px] space-y-2 font-mono text-charcoal-text/70">
+                  <div className="bg-ivory-warm p-4 rounded-xl border border-charcoal-text/5 text-left text-[11px] space-y-2 font-dmSans text-charcoal-text/70">
                     <div>CLIENT: {clientName}</div>
                     <div>PROVIDER: {selectedPro.name}</div>
                     <div>RATE: {selectedPro.pricingText}</div>
@@ -391,7 +327,7 @@ export default function HomeSection() {
 
                   {/* Select Slot */}
                   <div className="space-y-2">
-                    <label className="text-[10px] font-mono uppercase tracking-widest text-charcoal-text/70 block">
+                    <label className="text-[10px] font-dmSans uppercase tracking-widest text-charcoal-text/70 block">
                       1. Select Available Slot *
                     </label>
                     <div className="grid grid-cols-2 gap-2">
@@ -402,7 +338,7 @@ export default function HomeSection() {
                             key={slot}
                             type="button"
                             onClick={() => setSelectedSlot(slot)}
-                            className={`p-3 rounded-xl border text-xs font-mono transition-all duration-200 cursor-pointer text-center ${
+                            className={`p-3 rounded-2xl border text-xs font-dmSans transition-all duration-200 cursor-pointer text-center ${
                               isThis
                                 ? 'bg-rose-dusty text-white border-rose-dusty shadow-sm'
                                 : 'bg-ivory-warm text-charcoal-text/80 border-charcoal-text/10 hover:border-charcoal-text/30'
@@ -417,7 +353,7 @@ export default function HomeSection() {
 
                   {/* Client Info */}
                   <div className="space-y-3">
-                    <label className="text-[10px] font-mono uppercase tracking-widest text-charcoal-text/70 block">
+                    <label className="text-[10px] font-dmSans uppercase tracking-widest text-charcoal-text/70 block">
                       2. Personal Coordinates *
                     </label>
                     <div className="space-y-2">
@@ -427,7 +363,7 @@ export default function HomeSection() {
                         placeholder="Your Name (e.g. Elena)"
                         value={clientName}
                         onChange={(e) => setClientName(e.target.value)}
-                        className="w-full bg-ivory-warm border border-charcoal-text/15 px-4 py-3 text-xs rounded-xl focus:outline-hidden focus:border-rose-dusty transition-all"
+                        className="w-full bg-ivory-warm border border-charcoal-text/15 px-4 py-3 text-xs rounded-2xl focus:outline-hidden focus:border-rose-dusty transition-all"
                       />
                       <input
                         type="tel"
@@ -435,13 +371,13 @@ export default function HomeSection() {
                         placeholder="Mobile Phone (for instant reminders)"
                         value={clientPhone}
                         onChange={(e) => setClientPhone(e.target.value)}
-                        className="w-full bg-ivory-warm border border-charcoal-text/15 px-4 py-3 text-xs rounded-xl focus:outline-hidden focus:border-rose-dusty transition-all"
+                        className="w-full bg-ivory-warm border border-charcoal-text/15 px-4 py-3 text-xs rounded-2xl focus:outline-hidden focus:border-rose-dusty transition-all"
                       />
                     </div>
                   </div>
 
                   {/* Dynamic escrow notice */}
-                  <div className="bg-blush-soft/20 border border-charcoal-text/5 p-4 rounded-xl space-y-1">
+                  <div className="bg-blush-soft/20 border border-charcoal-text/5 p-4 rounded-2xl space-y-1">
                     <div className="flex items-center gap-2 text-xs text-rose-dusty font-semibold">
                       <ShieldCheck className="w-4 h-4 shrink-0" />
                       <span>Sheree Escrow Protection Active</span>
@@ -455,7 +391,7 @@ export default function HomeSection() {
                   <button
                     type="submit"
                     disabled={!selectedSlot || !clientName}
-                    className="w-full bg-charcoal-text hover:bg-rose-dusty disabled:bg-charcoal-text/30 text-white font-mono text-xs uppercase tracking-widest py-4 rounded-full flex items-center justify-center gap-2 transition-colors duration-250 cursor-pointer"
+                    className="w-full bg-charcoal-text hover:bg-rose-dusty disabled:bg-charcoal-text/30 text-white font-dmSans text-xs uppercase tracking-widest py-4 rounded-full flex items-center justify-center gap-2 transition-colors duration-250 cursor-pointer"
                   >
                     <Calendar className="w-4 h-4" />
                     Lock Instant Slot

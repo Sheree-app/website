@@ -1,5 +1,19 @@
 import type { Metadata } from 'next';
+import { DM_Sans, Playfair_Display } from 'next/font/google';
 import './globals.css';
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  style: ['normal', 'italic'],
+  display: 'swap',
+});
 import Sidebar from '@/components/Sidebar';
 import Footer from '@/components/Footer';
 import CustomCursor from '@/components/CustomCursor';
@@ -16,31 +30,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-ivory-warm text-charcoal-text font-sans antialiased relative selection:bg-blush-soft">
+    <html lang="en" className={`${dmSans.variable} ${playfair.variable}`}>
+      <body className="min-h-screen w-full overflow-x-hidden bg-ivory-warm text-charcoal-text font-sans antialiased relative selection:bg-blush-soft">
         {/* Custom Mouse Pointer */}
         <CustomCursor />
 
-        {/* Decorative Outer Editorial Border Frame */}
-        <div className="hidden xl:block fixed inset-4 border border-rose-dusty/15 pointer-events-none z-40 rounded-[20px]" />
 
         {/* Main Structural Layout */}
-        <div className="max-w-7xl mx-auto xl:px-4">
-          <div className="flex flex-col min-h-screen relative">
+        <div className="flex flex-col min-h-screen relative">
 
-            {/* TOP HEADER: Navigation */}
-            <Sidebar />
+          {/* TOP HEADER: Navigation */}
+          <Sidebar />
 
-            {/* PAGE CONTENT */}
-            <main className="flex-1 p-6 md:p-12 xl:p-16 bg-ivory-warm">
+          {/* PAGE CONTENT — max-width constrained, horizontally centred */}
+          <main className="flex-1 bg-ivory-warm">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-16 py-10 md:py-16">
               <PageTransition>
                 {/* Active Section Content */}
                 <div className="pb-16">
                   {children}
                 </div>
               </PageTransition>
-            </main>
-          </div>
+            </div>
+          </main>
         </div>
 
         {/* Full-width Footer — outside constrained wrapper */}

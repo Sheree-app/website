@@ -50,11 +50,11 @@ export default function ContactSection() {
     <div className="space-y-16 lg:space-y-24">
       {/* Editorial Header */}
       <section className="space-y-4 max-w-2xl">
-        <span className="text-[10px] font-mono text-rose-dusty uppercase tracking-widest font-semibold block">Inquiries &amp; Applications</span>
+        <span className="text-[10px] font-dmSans text-rose-dusty uppercase tracking-widest font-semibold block">Inquiries &amp; Applications</span>
         <h1 className="text-4xl md:text-5xl font-serif text-charcoal-text font-normal leading-tight">
           Join our independent circle.
         </h1>
-        <p className="text-sm font-mono text-sage-accent uppercase tracking-widest font-medium">
+        <p className="text-sm font-dmSans text-sage-accent uppercase tracking-widest font-medium">
           Apply as a service provider or ask us questions.
         </p>
       </section>
@@ -82,7 +82,7 @@ export default function ContactSection() {
               </div>
               <button
                 onClick={() => setIsSubmitted(false)}
-                className="border border-charcoal-text/20 hover:border-rose-dusty hover:text-rose-dusty font-mono text-xs uppercase tracking-widest px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer"
+                className="border border-charcoal-text/20 hover:border-rose-dusty hover:text-rose-dusty font-dmSans text-xs uppercase tracking-widest px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer"
               >
                 Send Another Message
               </button>
@@ -95,7 +95,7 @@ export default function ContactSection() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-[10px] font-mono uppercase tracking-widest text-charcoal-text/70 block">
+                  <label htmlFor="name" className="text-[10px] font-dmSans uppercase tracking-widest text-charcoal-text/70 block">
                     Your Full Name *
                   </label>
                   <input
@@ -111,7 +111,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-[10px] font-mono uppercase tracking-widest text-charcoal-text/70 block">
+                  <label htmlFor="email" className="text-[10px] font-dmSans uppercase tracking-widest text-charcoal-text/70 block">
                     Your Email coordinates *
                   </label>
                   <input
@@ -129,7 +129,7 @@ export default function ContactSection() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="userType" className="text-[10px] font-mono uppercase tracking-widest text-charcoal-text/70 block">
+                  <label htmlFor="userType" className="text-[10px] font-dmSans uppercase tracking-widest text-charcoal-text/70 block">
                     Who are you?
                   </label>
                   <select
@@ -137,7 +137,7 @@ export default function ContactSection() {
                     name="userType"
                     value={formData.userType}
                     onChange={handleChange}
-                    className="w-full bg-ivory-warm border border-charcoal-text/15 px-4 py-3 text-xs font-mono rounded-xl focus:outline-hidden focus:border-rose-dusty focus:bg-white transition-all duration-200 cursor-pointer"
+                    className="w-full bg-ivory-warm border border-charcoal-text/15 px-4 py-3 text-xs font-dmSans rounded-xl focus:outline-hidden focus:border-rose-dusty focus:bg-white transition-all duration-200 cursor-pointer"
                   >
                     <option value="professional">Service Professional / Artist</option>
                     <option value="customer">App Customer / Client</option>
@@ -147,7 +147,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="subject" className="text-[10px] font-mono uppercase tracking-widest text-charcoal-text/70 block">
+                  <label htmlFor="subject" className="text-[10px] font-dmSans uppercase tracking-widest text-charcoal-text/70 block">
                     Subject Line
                   </label>
                   <input
@@ -163,7 +163,7 @@ export default function ContactSection() {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="message" className="text-[10px] font-mono uppercase tracking-widest text-charcoal-text/70 block">
+                <label htmlFor="message" className="text-[10px] font-dmSans uppercase tracking-widest text-charcoal-text/70 block">
                   Your Message or Application Link *
                 </label>
                 <textarea
@@ -181,7 +181,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-charcoal-text hover:bg-rose-dusty disabled:bg-charcoal-text/40 text-white font-mono text-xs uppercase tracking-widest py-4 rounded-full flex items-center justify-center gap-3 transition-colors duration-250 cursor-pointer"
+                className="w-full bg-charcoal-text hover:bg-rose-dusty disabled:bg-charcoal-text/40 text-white font-dmSans text-xs uppercase tracking-widest py-4 rounded-full flex items-center justify-center gap-3 transition-colors duration-250 cursor-pointer"
               >
                 {isSubmitting ? (
                   <>
@@ -227,14 +227,14 @@ export default function ContactSection() {
                 <div className="space-y-0.5">
                   <h4 className="font-sans font-semibold text-xs text-charcoal-text uppercase tracking-widest">Curation Assessment Hours</h4>
                   <p className="text-xs">Monday to Friday &mdash; 09:00 to 17:00 CEST</p>
-                  <p className="text-[10px] text-charcoal-text/50 font-mono">Customer support queue active 24/7 inside the Super App</p>
+                  <p className="text-[10px] text-charcoal-text/50 font-dmSans">Customer support queue active 24/7 inside the Super App</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="border border-sage-accent/25 p-6 md:p-8 bg-ivory-warm rounded-3xl space-y-3">
-            <div className="flex items-center gap-2 text-sage-accent font-semibold text-sm font-mono">
+            <div className="flex items-center gap-2 text-sage-accent font-semibold text-sm font-dmSans">
               <ShieldAlert className="w-4 h-4" />
               <span>Curation Guidelines</span>
             </div>

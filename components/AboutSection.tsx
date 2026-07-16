@@ -9,41 +9,86 @@ export default function AboutSection() {
     <div className="space-y-24 md:space-y-32">
       {/* 1. EDITORIAL HEADER */}
       <motion.section
-        className="space-y-4 max-w-3xl"
+        className="space-y-4 max-w-3xl mx-auto text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <span className="text-[10px] font-mono text-rose-dusty uppercase tracking-widest font-semibold block">Platform Vision</span>
-        <h1 className="text-4xl md:text-5xl font-serif text-charcoal-text font-normal leading-tight">
+        {/* <span className="text-[10px] font-dmSans text-rose-dusty uppercase tracking-widest font-semibold block">
+          Platform Vision
+        </span> */}
+        <h1 className="text-5xl md:text-5xl font-serif text-charcoal-text font-bold leading-tight text-center">
           Unifying independence with seamless digital flow.
         </h1>
-        <p className="text-sm font-mono text-sage-accent uppercase tracking-widest font-medium">
+        {/* <p className="text-sm font-dmSans text-sage-accent uppercase tracking-widest font-medium">
           The booking super app built for modern service professionals.
-        </p>
+        </p> */}
       </motion.section>
 
       {/* 2. CORE NARRATIVE SPLIT */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left column: Narrative with high-end typography */}
-        <div className="lg:col-span-7 space-y-6">
-          <h2 className="text-2xl md:text-3xl font-serif text-charcoal-text font-light italic leading-snug">
-            &ldquo;Independent business is not a second-rate path. It is the premier choice of modern artisans. We build software that treats it with respect.&rdquo;
-          </h2>
-          <div className="space-y-4 text-charcoal-text/80 font-light leading-relaxed text-sm md:text-base">
-            <p>
-              Sheree was founded in 2026 to resolve a striking digital imbalance. While mass marketplaces emerged for rideshares, food delivery, and hotel stays, the independent creative and beauty sector remained trapped in pre-industrial administrative chaos.
-            </p>
-            <p>
-              We watched brilliant hair sculptors, physical therapists, photographers, and interior artists spend half their waking hours answering Instagram direct messages, hunting down mobile deposits, and correcting double bookings. We believed their craft deserved a beautiful digital sanctuary.
-            </p>
-            <p>
-              By unifying social discovery, unedited reviews, instant calendar matching, and smart digital card escrows into a single gorgeous super app, Sheree allows professionals to run a modern shopfront while focusing entirely on their true expertise.
-            </p>
+        <div className="lg:col-span-7 space-y-8">
+          {/* <h2 className="text-2xl md:text-3xl font-serif text-charcoal-text font-light italic leading-snug">
+            &ldquo;Independent business is not a second-rate path. It is the
+            premier choice of modern artisans. We build software that treats it
+            with respect.&rdquo;
+          </h2> */}
+
+          {/* Three distinct parts: Story, Mission, Vision */}
+          <div className="grid grid-cols-1 gap-6">
+            <div className="border-l-2 border-rose-dusty/30 pl-5 space-y-2">
+              <span className="text-[10px] font-dmSans text-rose-dusty uppercase tracking-widest font-semibold block">
+                {" "}
+                Our Story
+              </span>
+              <h3 className="font-serif text-lg text-charcoal-text font-normal">
+                Resolving the digital imbalance.
+              </h3>
+              <p className="text-xs md:text-sm text-charcoal-text/75 leading-relaxed font-light">
+                Sheree was founded in 2026 to resolve a striking digital
+                imbalance. While mass marketplaces emerged for rideshares, food
+                delivery, and hotel stays, the independent creative and beauty
+                sector remained trapped in pre-industrial administrative chaos.
+              </p>
+            </div>
+
+            <div className="border-l-2 border-rose-dusty/30 pl-5 space-y-2">
+              <span className="text-[10px] font-dmSans text-rose-dusty uppercase tracking-widest font-semibold block">
+                {" "}
+                Our Mission
+              </span>
+              <h3 className="font-serif text-lg text-charcoal-text font-normal">
+                A beautiful digital sanctuary.
+              </h3>
+              <p className="text-xs md:text-sm text-charcoal-text/75 leading-relaxed font-light">
+                We watched brilliant hair sculptors, physical therapists,
+                photographers, and interior artists spend half their waking
+                hours answering Instagram direct messages, hunting down mobile
+                deposits, and correcting double bookings. We believed their
+                craft deserved a beautiful digital sanctuary.
+              </p>
+            </div>
+
+            <div className="border-l-2 border-rose-dusty/30 pl-5 space-y-2">
+              <span className="text-[10px] font-dmSans text-rose-dusty uppercase tracking-widest font-semibold block">
+                {" "}
+                Our Vision
+              </span>
+              <h3 className="font-serif text-lg text-charcoal-text font-normal">
+                Focusing entirely on true expertise.
+              </h3>
+              <p className="text-xs md:text-sm text-charcoal-text/75 leading-relaxed font-light">
+                By unifying social discovery, unedited reviews, instant calendar
+                matching, and smart digital card escrows into a single gorgeous
+                super app, Sheree allows professionals to run a modern shopfront
+                while focusing entirely on their true expertise.
+              </p>
+            </div>
           </div>
 
           {/* Sourcing credentials */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-charcoal-text/10">
             <div className="border border-charcoal-text/10 p-5 rounded-2xl bg-white space-y-2">
               <Compass className="w-5 h-5 text-rose-dusty" />
               <h4 className="font-sans font-semibold text-xs text-charcoal-text uppercase tracking-widest">Social-First Discovery</h4>
@@ -58,7 +103,7 @@ export default function AboutSection() {
                 Built-in digital cards keep funds secured until services are completed, defending both client trust and provider hours.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Right column: Image */}
@@ -75,17 +120,17 @@ export default function AboutSection() {
       </section>
 
       {/* 3. INTERACTIVE PROBLEM VS SOLUTION GRID */}
-      <section className="border-t border-charcoal-text/10 pt-16 space-y-12">
+      {/* <section className="border-t border-charcoal-text/10 pt-16 space-y-12">
         <div className="space-y-2 text-center md:text-left">
-          <span className="text-[10px] font-mono text-rose-dusty uppercase tracking-widest font-semibold block">Detailed Structural View</span>
+          <span className="text-[10px] font-dmSans text-rose-dusty uppercase tracking-widest font-semibold block">Detailed Structural View</span>
           <h2 className="text-3xl font-serif text-charcoal-text">The Anatomy of decel-booking</h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-          {/* Column A: Problem list */}
+          
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 bg-rose-dusty/10 px-3 py-1 rounded-full text-xs text-rose-dusty font-mono font-semibold">
+            <div className="inline-flex items-center gap-2 bg-rose-dusty/10 px-3 py-1 rounded-full text-xs text-rose-dusty font-dmSans font-semibold">
               The Scattered Status Quo
             </div>
 
@@ -108,9 +153,9 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Column B: Solution list */}
+          
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 bg-sage-accent/10 px-3 py-1 rounded-full text-xs text-sage-accent font-mono font-semibold">
+            <div className="inline-flex items-center gap-2 bg-sage-accent/10 px-3 py-1 rounded-full text-xs text-sage-accent font-dmSans font-semibold">
               The Sheree Integration Flow
             </div>
 
@@ -137,16 +182,21 @@ export default function AboutSection() {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
       {/* 4. PERSUASIVE COMMITMENT BADGE */}
       <section className="bg-rose-dusty/10 border border-rose-dusty/25 p-8 md:p-12 text-center space-y-4 rounded-3xl">
         <div className="inline-flex p-2.5 bg-white border border-rose-dusty/25 rounded-full shadow-xs">
           <Heart className="w-5 h-5 text-rose-dusty fill-rose-dusty" />
         </div>
-        <h3 className="text-2xl font-serif text-charcoal-text">The Sheree Platform Pledge</h3>
+        <h3 className="text-2xl font-serif text-charcoal-text">
+          The Sheree Platform Pledge
+        </h3>
         <p className="text-sm text-charcoal-text/80 max-w-xl mx-auto leading-relaxed font-light">
-          We will never capture user records to trade with advertisement networks, force restrictive dynamic booking premiums, or hide independent fees. We exist solely to assist artists, beauticians, therapists, and designers in reclaiming their time and focus.
+          We will never capture user records to trade with advertisement
+          networks, force restrictive dynamic booking premiums, or hide
+          independent fees. We exist solely to assist artists, beauticians,
+          therapists, and designers in reclaiming their time and focus.
         </p>
       </section>
     </div>
