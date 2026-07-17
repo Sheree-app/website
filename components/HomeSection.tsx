@@ -73,22 +73,22 @@ export default function HomeSection() {
           </p>
 
           {/* Action buttons */}
-          <div className="pt-4 flex flex-wrap gap-4">
+          <div className="pt-4 flex flex-row gap-3 sm:gap-4 max-w-md">
             <a
               href="#"
               onClick={(e) => {
                 e.preventDefault();
                 router.push('/download');
               }}
-              className="flex items-center gap-3 bg-black hover:bg-zinc-900 text-white px-6 py-3 rounded-2xl transition-all duration-200 cursor-pointer shadow-md hover:shadow-lg border border-white/10 hover:scale-[1.02]"
+              className="flex-1 min-w-0 flex items-center justify-center gap-2 sm:gap-3 bg-black hover:bg-zinc-900 text-white px-3 sm:px-6 py-3 rounded-2xl transition-all duration-200 cursor-pointer shadow-md hover:shadow-lg border border-white/10 hover:scale-[1.02]"
               aria-label="Download on the App Store"
             >
-              <svg className="w-6 h-6 fill-white" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 fill-white shrink-0" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
                 <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-63.3-64.4-63.3-64.4zm-66.7-175.7c15.8-19.2 26.5-45.7 23.6-72.2-22.9 1.1-50.6 15.3-66.7 34.7-14.5 16.7-27.1 43.4-23.7 69.4 25.9 2 51-14.1 66.8-31.9z"/>
               </svg>
-              <div className="text-left select-none">
-                <p className="text-[8px] font-dmSans uppercase tracking-wider text-zinc-400 font-semibold leading-none mb-0.5">Download on the</p>
-                <p className="text-sm font-dmSans font-bold leading-tight">App Store</p>
+              <div className="text-left select-none min-w-0">
+                <p className="text-[8px] font-dmSans uppercase tracking-wider text-zinc-400 font-semibold leading-none mb-0.5 truncate">Download on the</p>
+                <p className="text-xs sm:text-sm font-dmSans font-bold leading-tight truncate">App Store</p>
               </div>
             </a>
             <a
@@ -97,10 +97,10 @@ export default function HomeSection() {
                 e.preventDefault();
                 router.push('/download');
               }}
-              className="flex items-center gap-3 bg-black hover:bg-zinc-900 text-white px-6 py-3 rounded-2xl transition-all duration-200 cursor-pointer shadow-md hover:shadow-lg border border-white/10 hover:scale-[1.02]"
+              className="flex-1 min-w-0 flex items-center justify-center gap-2 sm:gap-3 bg-black hover:bg-zinc-900 text-white px-3 sm:px-6 py-3 rounded-2xl transition-all duration-200 cursor-pointer shadow-md hover:shadow-lg border border-white/10 hover:scale-[1.02]"
               aria-label="Get it on Google Play"
             >
-              <svg className="w-6 h-6" viewBox="0 0 466 511.98" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" viewBox="0 0 466 511.98" xmlns="http://www.w3.org/2000/svg">
                 <g fillRule="nonzero">
                   <path fill="#EA4335" d="M199.9 237.8 1.4 470.17c7.22 24.57 30.16 41.81 55.8 41.81 11.16 0 20.93-2.79 29.3-8.37l244.16-139.46L199.9 237.8z"/>
                   <path fill="#FBBC04" d="m433.91 205.1-104.65-60-111.61 110.22 113.01 108.83 104.64-58.6c18.14-9.77 30.7-29.3 30.7-50.23-1.4-20.93-13.95-40.46-32.09-50.22z"/>
@@ -108,9 +108,9 @@ export default function HomeSection() {
                   <path fill="#4285F4" d="M1.39 41.86C0 46.04 0 51.63 0 57.2v397.64c0 5.57 0 9.76 1.4 15.34l216.27-214.86L1.39 41.86z"/>
                 </g>
               </svg>
-              <div className="text-left select-none">
-                <p className="text-[8px] font-dmSans uppercase tracking-wider text-zinc-400 font-semibold leading-none mb-0.5">Get it on</p>
-                <p className="text-sm font-dmSans font-bold leading-tight">Google Play</p>
+              <div className="text-left select-none min-w-0">
+                <p className="text-[8px] font-dmSans uppercase tracking-wider text-zinc-400 font-semibold leading-none mb-0.5 truncate">Get it on</p>
+                <p className="text-xs sm:text-sm font-dmSans font-bold leading-tight truncate">Google Play</p>
               </div>
             </a>
           </div>

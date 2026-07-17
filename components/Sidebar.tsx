@@ -34,7 +34,7 @@ export default function Sidebar() {
         </div>
 
         {/* Desktop Horizontal Navigation */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-6ch">
           {MENU_ITEMS.map((item) => {
             const isActive =
               pathname === item.href ||
@@ -44,7 +44,7 @@ export default function Sidebar() {
                 key={item.id}
                 id={`nav-${item.id}`}
                 href={item.href}
-                className={`font-dmSans text-[11px] uppercase tracking-widest px-3 py-2 transition-all duration-200 rounded-2xl flex items-center gap-1 cursor-pointer group ${
+                className={`font-dmSans text-[11px] uppercase tracking-widest px-3 py-2  transition-all duration-200 rounded-2xl flex items-center gap-1 cursor-pointer group ${
                   isActive
                     ? "bg-rose-dusty text-white font-medium shadow-xs"
                     : "text-charcoal-text/75 hover:text-charcoal-text hover:bg-blush-soft/40"
@@ -113,7 +113,7 @@ export default function Sidebar() {
                           className={`w-full text-left font-dmSans text-xs uppercase tracking-widest p-3 transition-all duration-150 cursor-pointer rounded-xl block ${
                             isActive
                               ? "bg-rose-dusty text-white font-medium shadow-xs"
-                              : "text-charcoal-text/80 bg-white border border-charcoal-text/5 hover:border-rose-dusty"
+                              : "text-charcoal-text/80 bg-white "
                           }`}
                         >
                           {item.label}
@@ -129,7 +129,7 @@ export default function Sidebar() {
                       className={`w-full text-left font-dmSans text-xs uppercase tracking-widest p-3 transition-all duration-150 cursor-pointer rounded-xl block ${
                         pathname === "/download"
                           ? "bg-rose-dusty text-white font-medium shadow-xs"
-                          : "text-charcoal-text/80 bg-white border border-charcoal-text/5 hover:border-rose-dusty"
+                          : "text-charcoal-text/80 bg-white hover:text-rose-dusty"
                       }`}
                     >
                       Download
